@@ -6,7 +6,7 @@ def pedir_numeros():
         try:
             numero = int(input("Introduce un número: "))
             
-            # Comprobamos si es la primera iteración
+            # Comprobamos si es la primera comparacion
             if numero_anterior is not None:
                 if numero <= numero_anterior:
                     print(f"El número {numero} es menor o igual que el número anterior ({numero_anterior}). Fin del programa.")
