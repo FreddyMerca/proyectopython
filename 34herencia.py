@@ -23,9 +23,33 @@ class Vehiculos():
         print("Marca: ", self.marca, "\nModelo :" , self.modelo, "\nEn Marcha: ", self.enmarcha, "\nAcelerando :", 
           self.acelera, "\nFrenando: ", self.frena)
 
-class moto(Vehiculos): #La clase Moto hereda los atributos de la clase Vehiculos
-    pass
+class Moto(Vehiculos): #La clase Moto hereda los atributos de la clase Vehiculos
+        hcaballito=""
+        def caballito(self):
+             #la clase moto le creamos un comportamiento que Vehiculos, tiene 5 heredados y el propio
+             self.hcaballito="Haciendo Caballito"
 
-miMoto=moto("Honda", "CBR")
+        def estado(self):
+            print("Marca: ", self.marca, "\nModelo :" , self.modelo, "\nEn Marcha: ", self.enmarcha, "\nAcelerando :",   
+            self.acelera, "\nFrenando: ", self.frena, "\nPirueta: ", self.hcaballito)
+        
+        #Se crea un metodo estado tambien en la clase moto debido a que no lo hereda desde vehiculo con la misma cantidad de parametros 
 
-miMoto.estado()
+class Furgoneta(Vehiculos):
+     
+     def carga(self, cargam):
+          self.cargado=cargam
+          if(self.cargado):
+               return "la furgoneta esta cargada"
+          else:
+               return "La furgoneta no est cargada"
+
+
+miMoto=Moto("Honda", "CBR")
+miMoto.estado() #Aqui se imprime el ultimo metodo similar que se usa en este caso el de moto 
+miMoto.caballito()
+MiFurgoneta=Furgoneta("Renault", "FBR")
+MiFurgoneta.arrancar()
+MiFurgoneta.estado()
+print(MiFurgoneta.carga(True)) 
+
