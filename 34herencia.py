@@ -1,6 +1,6 @@
 class Vehiculos():
 
-    def __init__(self, marca, modelo):
+    def __init__(self, marca, modelo): #def __init se le conoce com constructor def es el metodo
 
         self.marca=marca #es igual a la marca que se le pase por parametro
         self.modelo=modelo #es igual al modelo que se le pase por parametro
@@ -43,6 +43,20 @@ class Furgoneta(Vehiculos):
                return "la furgoneta esta cargada"
           else:
                return "La furgoneta no est cargada"
+
+class VElectricos():
+     def __init__(self):
+          self.autonomia=100
+
+     def cargarEnergia(self):
+          self.cargando=True    
+
+          
+class BiciElectrica(VElectricos, Vehiculos): #Herencia multiple, herencia de dos o mas clases
+     pass
+
+miBici=BiciElectrica() #En la herencia multiple, se hereda el constructor de la primera clase que se pone
+                 
 
 
 miMoto=Moto("Honda", "CBR")
