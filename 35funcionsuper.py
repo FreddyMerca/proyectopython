@@ -28,4 +28,4 @@ class Empleado(Persona):
 Freddy=Empleado(4000400, 2, "Freddy", 37, "Cali")  #Objeto de tipo segun la clase
 Freddy.descripcion()
 
-print(isinstance(Freddy, Empleado))
+print(isinstance(Freddy, Empleado)) #isintancia indica si el objeto pertenence a esa clase

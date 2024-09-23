@@ -55,15 +55,3 @@ class VElectricos(Vehiculos):
 class BiciElectrica(VElectricos, Vehiculos): #Herencia multiple, herencia de dos o mas clases
      pass
 
-miBici=BiciElectrica() #En la herencia multiple, se hereda el constructor de la primera clase que se pone
-                 
-
-
-miMoto=Moto("Honda", "CBR")
-miMoto.estado() #Aqui se imprime el ultimo metodo similar que se usa en este caso el de moto 
-miMoto.caballito()
-MiFurgoneta=Furgoneta("Renault", "FBR")
-MiFurgoneta.arrancar()
-MiFurgoneta.estado()
-print(MiFurgoneta.carga(True)) 
-
