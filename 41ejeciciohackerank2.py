@@ -1,12 +1,13 @@
 
-n=int(input("Digite Numero: "))
+year = int(input("Ingrese año: "))
 
-if n % 2 != 0:
-        print("Weird")
-elif n % 2 == 0:
-        if 2 <= n <= 5:
-            print("Not Weird")
-        elif 6 <= n <= 20:
-            print("Weird")
-        elif n > 20:
-            print("Not Weird")
+leap = False
+    
+    # Write your logic here
+if year%4==0 and year%400==0 and year%100!=0:
+      leap=True
+      print("leap year")
+
+else:
+      leapeap=False
+      print("Not leap year")
