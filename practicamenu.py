@@ -1,6 +1,11 @@
 from tkinter import *
+from tkinter import messagebox #Libreria para ventanas emergentes
 
 root=Tk()
+
+def infoAdicional():
+
+    messagebox.showinfo("")
 
 barraMenu=Menu(root) #Funcion Menu
 
